@@ -1,7 +1,13 @@
-function TodoInput() {
+function TodoInput(props) {
+    const { addTodo } = props;
+
+    function addTodoHandler() {
+        addTodo('some text');
+    }
+
     return (
         <div>
-            <p>todo input</p>
+            <p onClick={addTodoHandler} >todo input</p>
         </div>
     )
 };
